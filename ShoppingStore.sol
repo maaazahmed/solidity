@@ -34,7 +34,7 @@ contract DCStore {
 
     function createStore(string memory _storeName) public payable {
         require(msg.sender != manager , "You are manager you cant create store with current address.");
-        require(msg.value == 1 ether, "You have to pay 10 wei fee to create a new store");
+        require(msg.value == 100 wei, "You have to pay 100 wei fee to create a new store");
         address payable sendFee = payable(manager);
         StoresList storage newStore = storesList[msg.sender];
         newStore.storeName = _storeName;
