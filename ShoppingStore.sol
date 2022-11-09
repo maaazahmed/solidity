@@ -21,6 +21,8 @@ contract DCStore {
 
     mapping(address=>StoresList) public storesList; 
     
+    mapping(address=>mapping(uint=>uint)) public cartList;
+    
 
     constructor(){
         manager = msg.sender;
@@ -55,5 +57,13 @@ contract DCStore {
            newProduct.quantity = _quantity;
            myStore.itemID++;
     }
+
+
+   function addToCart(address buer_address, uint _productId, address _storeAddress ,uint _quantity ) public {
+       StoresList storage fineStore =  storesList[_storeAddress]; 
+       require(fineStore.owner  == _storeAddress , "Ivalid store!");
+       require(fineStore.products[_productId].quantity >= _quantity, "Not availble");
+       cartList[buer_address][_productId] = _quantity;
+   }
   
 }
