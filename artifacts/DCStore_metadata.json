@@ -54,8 +54,23 @@
 				"name": "cartList",
 				"outputs": [
 					{
+						"internalType": "address",
+						"name": "storeAddress",
+						"type": "address"
+					},
+					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "productId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "total",
 						"type": "uint256"
 					}
 				],
@@ -127,6 +142,19 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256[]",
+						"name": "cartItems",
+						"type": "uint256[]"
+					}
+				],
+				"name": "purchaseNow",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
@@ -182,11 +210,11 @@
 	},
 	"sources": {
 		"ShoppingStore.sol": {
-			"keccak256": "0xbb9b88c3ad639648d970e4168f9eb498aa598ea90136ca13f50f6d427f9d28f8",
+			"keccak256": "0x63234be0301ad712fa06dec9c99bafe320e53b7c40b11ecbc8c2136e9d259d47",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://6c3dd40002a4613406ce7ce73791bf98d510e7233c75726ea8a799082013ca27",
-				"dweb:/ipfs/QmVpvX7ZNVSVdEwjaXjVptNcBctFc9KJUQZq6oHtVPpXY4"
+				"bzz-raw://332f509c098519041e74bbf4283be2dfdd5f755cb087e117ee8d470dc4c39d82",
+				"dweb:/ipfs/QmfYkV9YAga3nbHc53xYYKMyNEbLQB9cDTov645HuhqHcq"
 			]
 		}
 	},
